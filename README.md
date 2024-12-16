@@ -1,3 +1,78 @@
+## Welcome an Angular Project! 👋
+
+# Memoteca!
+
+## Test the project yourself: [Test the project here!!!](https://memoteca-angular-seven.vercel.app/listarPensamento)
+
+### HomePage
+
+<img src="./src/assets/ss/homepage.png" alt="Home Page" width="50%">
+
+## Add thought
+
+<img src="./src/assets/ss/addPage.png" alt="Add Page" width="50%">
+
+## Edit thought
+
+<img src="./src/assets/ss/editPage.png" alt="Edit Page" width="50%">
+
+## Delete thought
+
+<img src="./src/assets/ss/deletePage.png" alt="Crud image" width="50%">
+
+
+## Some code that I'm proud of
+```js
+export class PensamentoService {
+
+  private readonly API = "http://localhost:3000/pensamentos"
+
+  constructor(private http: HttpClient) { }
+
+  listar(): Observable<Pensamento[]> {
+    return this.http.get<Pensamento[]>(this.API)
+  }
+
+  cadastrar(pensamento: Pensamento): Observable<Pensamento> {
+    return this.http.post<Pensamento>(this.API, pensamento)
+  }
+
+  editar(pensamento: Pensamento): Observable<Pensamento> {
+    const url = `${this.API}/${pensamento.id}`
+    return this.http.put<Pensamento>(url, pensamento)
+  }
+
+  excluir(id: number): Observable<Pensamento> {
+    const url = `${this.API}/${id}`
+    return this.http.delete<Pensamento>(url)
+  }
+
+  buscarPorId(id: number): Observable<Pensamento> {
+    const url = `${this.API}/${id}`
+    return this.http.get<Pensamento>(url)
+  }
+}
+```
+
+## Built with
+
+- [`Angular version 14.0.0`](https://www.npmjs.com/package/@angular/cli)
+- [`Json Server`](https://www.npmjs.com/package/json-server)
+
+## You Can
+- **C**reate a thought;
+- **R**ead the current database;
+- **U**pdate / edit thoughts;
+- **D**elete thoughts.
+
+## Author
+
+- Website - [My GitHub](https://github.com/lucasbailo)
+- Frontend Mentor - [@lucasbailo](https://www.frontendmentor.io/profile/lucasbailo)
+- Instagram - [@lucassbailo](https://www.instagram.com/lucassbailo/)
+- LinkedIn - [Lucas Bailo](https://www.linkedin.com/in/lcsbailo)
+
+
 # Memoteca
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.

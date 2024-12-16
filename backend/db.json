@@ -1,15 +1,9 @@
 {
   "pensamentos": [
     {
-      "id": "1",
-      "conteudo": "Que bom que você veio",
-      "autoria": "Eu mesmo",
-      "modelo": "modelo1"
-    },
-    {
       "id": "2",
-      "conteudo": "Quase muito bom que você veio",
-      "autoria": "Eu também",
+      "conteudo": "Quase muito bom que você veio hoje",
+      "autoria": "Eu também vim",
       "modelo": "modelo3"
     },
     {
@@ -17,12 +11,6 @@
       "conteudo": "Talvez foi bom que você veio",
       "autoria": "Eu acho",
       "modelo": "modelo2"
-    },
-    {
-      "id": 1,
-      "conteudo": "teste",
-      "autoria": "aaaaaaaaaaaaaaaaa",
-      "modelo": "modelo1"
     }
   ]
 }
